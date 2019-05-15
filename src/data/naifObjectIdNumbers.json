@@ -1,0 +1,142 @@
+[
+    {
+      "id": 0,
+      "name": "SOLAR_SYSTEM_BARYCENTER"
+    },
+    {
+      "id": 0,
+      "name": "SSB"
+    },
+    {
+      "id": 0,
+      "name": "SOLAR SYSTEM BARYCENTER"
+    },
+    {
+      "id": 1,
+      "name": "MERCURY_BARYCENTER"
+    },
+    {
+      "id": 1,
+      "name": "MERCURY BARYCENTER"
+    },
+    {
+      "id": 2,
+      "name": "VENUS_BARYCENTER"
+    },
+    {
+      "id": 2,
+      "name": "VENUS BARYCENTER"
+    },
+    {
+      "id": 3,
+      "name": "EARTH_BARYCENTER"
+    },
+    {
+      "id": 3,
+      "name": "EMB"
+    },
+    {
+      "id": 3,
+      "name": "EARTH MOON BARYCENTER"
+    },
+    {
+      "id": 3,
+      "name": "EARTH-MOON BARYCENTER"
+    },
+    {
+      "id": 3,
+      "name": "EARTH BARYCENTER"
+    },
+    {
+      "id": 4,
+      "name": "MARS_BARYCENTER"
+    },
+    {
+      "id": 4,
+      "name": "MARS BARYCENTER"
+    },
+    {
+      "id": 5,
+      "name": "JUPITER_BARYCENTER"
+    },
+    {
+      "id": 5,
+      "name": "JUPITER BARYCENTER"
+    },
+    {
+      "id": 6,
+      "name": "SATURN_BARYCENTER"
+    },
+    {
+      "id": 6,
+      "name": "SATURN BARYCENTER"
+    },
+    {
+      "id": 7,
+      "name": "URANUS_BARYCENTER"
+    },
+    {
+      "id": 7,
+      "name": "URANUS BARYCENTER"
+    },
+    {
+      "id": 8,
+      "name": "NEPTUNE_BARYCENTER"
+    },
+    {
+      "id": 8,
+      "name": "NEPTUNE BARYCENTER"
+    },
+    {
+      "id": 9,
+      "name": "PLUTO_BARYCENTER"
+    },
+    {
+      "id": 9,
+      "name": "PLUTO BARYCENTER"
+    },
+    {
+      "id": 10,
+      "name": "SUN"
+    },
+    {
+      "id": 199,
+      "name": "MERCURY"
+    },
+    {
+      "id": 299,
+      "name": "VENUS"
+    },
+    {
+      "id": 399,
+      "name": "EARTH"
+    },
+    {
+      "id": 499,
+      "name": "MARS"
+    },
+    {
+      "id": 401,
+      "name": "PHOBOS"
+    },
+    {
+      "id": 402,
+      "name": "DEIMOS"
+    },
+    {
+      "id": 599,
+      "name": "JUPITER"
+    },
+    {
+      "id": 699,
+      "name": "SATURN"
+    },
+    {
+      "id": 799,
+      "name": "URANUS"
+    },
+    {
+      "id": 999,
+      "name": "PLUTO"
+    }
+  ]    
