@@ -9,3 +9,11 @@ test('maps a name to an id; if one exists', () => {
   ).toBe(3);
 });
 
+test('maps a name to an id; if one exists', () => {
+  expect(
+    mapNameToId('Planet Marklark', [
+      { id: 3, name: 'EARTH MOON BARYCENTER' },
+      { id: 4, name: 'MARS_BARYCENTER' }
+    ])
+  ).toBe('Planet Marklark');
+});
