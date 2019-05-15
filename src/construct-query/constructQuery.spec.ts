@@ -1,7 +1,7 @@
 import constructQuery from './constructQuery';
 import url from '../api';
 
-test('constructs a url with query parameters that return state vectors for Ceres', () => {
+test('constructs a url with query parameters that return state vectors for a body', () => {
   expect(
     constructQuery({
       url,

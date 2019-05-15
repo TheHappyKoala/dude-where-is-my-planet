@@ -1,6 +1,6 @@
 import mapNameToId from './mapNameToId';
 
-test('constructs a url with query parameters that return state vectors for Ceres', () => {
+test('maps a name to an id; if one exists', () => {
   expect(
     mapNameToId('Earth Moo', [
       { id: 3, name: 'EARTH MOON BARYCENTER' },
@@ -8,3 +8,4 @@ test('constructs a url with query parameters that return state vectors for Ceres
     ])
   ).toBe(3);
 });
+
