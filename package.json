@@ -28,13 +28,16 @@
     "@types/node": "^12.0.0",
     "husky": "^2.2.0",
     "jest": "^24.8.0",
+    "jest-fetch-mock": "^2.1.2",
     "lint-staged": "^8.1.6",
     "nodemon": "^1.19.0",
-    "prettier": "^1.17.0", 
+    "prettier": "^1.17.0",
     "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
-    "typescript": "^3.4.5",
-    "yargs": "^13.2.4"
+    "typescript": "^3.4.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "cross-fetch": "^3.0.2",
+    "yargs": "^13.2.4"
+  }
 }
