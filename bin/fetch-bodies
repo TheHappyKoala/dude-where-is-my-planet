@@ -1,0 +1,48 @@
+#!/usr/bin/env node
+
+const argv = require('yargs')
+  .option('bodies', {
+    type: 'array',
+    desc: 'The names of one or more Solar System bodies'
+  })
+  .demandOption(['bodies'])
+  .option('center', {
+    type: 'string',
+    desc: 'The center of the coordinate system'
+  })
+  .demandOption(['center'])
+  .option('units', {
+    type: 'string',
+    desc: 'The units used for the state vectors'
+  })
+  .demandOption(['units'])
+  .option('step', {
+    type: 'string',
+    desc: 'The interval in time between sets of state vectors for a body'
+  })
+  .demandOption(['step'])
+  .option('start', {
+    type: 'string',
+    desc: 'The start date'
+  })
+  .demandOption(['start'])
+  .option('stop', {
+    type: 'string',
+    desc: 'The stop date'
+  })
+  .demandOption(['stop'])
+  .argv;
+
+require('../dist/index').fetchBodies({
+  url: 'https://ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1',
+  bodies: argv.bodies,
+  center: argv.center,
+  units: argv.units,    
+  step: argv.step,
+  start: argv.start,
+  stop: argv.stop
+});      
+
+   
+   
+             

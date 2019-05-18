@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Fetch state vectors for Solar System bodies from the JPL HORIZONS on-line solar system data and ephemeris.",
   "main": "./dist/index.js",
+  "bin": {
+    "fetch-bodies": "bin/fetch-bodies"
+  },
   "scripts": {
     "test": "jest",
     "start": "nodemon",

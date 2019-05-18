@@ -1,7 +1,4 @@
 import fetch from 'cross-fetch';
-import url from '../api';
-import naifObjectIdNumbers from '../data/naifObjectIdNumbers.json';
-import mapNameToId from '../map-name-to-id/mapNameToId';
 import constructQuery from '../construct-query/constructQuery';
 
 export default (options: {
@@ -12,11 +9,11 @@ export default (options: {
   start: string;
   stop: string;
   step: string;
-}): Promise<string> =>
-  fetch(
+}): Promise<string> => {
+  return fetch(
     constructQuery({
-      url,
-      body: mapNameToId(options.body, naifObjectIdNumbers).toString(),
+      url: options.url,
+      body: options.body,
       units: options.units,
       center: options.center,
       start: options.start,
@@ -24,8 +21,4 @@ export default (options: {
       step: options.step
     })
   ).then(response => response.text());
-
-
-
-
-  
+};
