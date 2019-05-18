@@ -1,6 +1,7 @@
 import naifObjectIdNumbers from './src/data/naifObjectIdNumbers.json';
 import mapNameToId from './src/map-name-to-id/mapNameToId';
 import callHorizons from './src/call-horizons/callHORIZONS';
+import parseOutputIntoJson from './src/parse-output-into-json/parseOutputIntoJson';
 
 export async function fetchBodies(options: {
   url: string;
@@ -36,7 +37,9 @@ export async function fetchBodies(options: {
         step: options.step
       });
 
-      data.push(response);
+      const json = await parseOutputIntoJson(response);
+
+      data.push(json);
     }
   } catch (error) {
     console.log(error);

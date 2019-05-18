@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "cross-fetch": "^3.0.2",
+    "csvtojson": "^2.0.8",
     "yargs": "^13.2.4"
   }
 }

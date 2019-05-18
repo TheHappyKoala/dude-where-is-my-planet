@@ -27,6 +27,6 @@ export default ({
     `&START_TIME='${start}'`,
     `&STOP_TIME='${stop}'`,
     `&STEP_SIZE='${step}'`,
-    `&QUANTITIES='1,9,20,23,24'`
+    `&QUANTITIES='1,9,20,23,24'&CSV_FORMAT='YES'`
   ].join('');
 };
