@@ -31,6 +31,10 @@ const argv = require('yargs')
     desc: 'The stop date'
   })
   .demandOption(['stop'])
+  .option('save', {
+    type: 'string',
+    desc: 'Where and whether or not to save the output to a file'
+  })
   .argv;
 
 require('../dist/index').fetchBodies({
@@ -40,7 +44,8 @@ require('../dist/index').fetchBodies({
   units: argv.units,    
   step: argv.step,
   start: argv.start,
-  stop: argv.stop
+  stop: argv.stop,
+  save: argv.save
 });      
 
    

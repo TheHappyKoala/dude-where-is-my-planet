@@ -2,6 +2,7 @@ import naifObjectIdNumbers from './src/data/naifObjectIdNumbers.json';
 import mapNameToId from './src/map-name-to-id/mapNameToId';
 import callHorizons from './src/call-horizons/callHORIZONS';
 import parseOutputIntoJson from './src/parse-output-into-json/parseOutputIntoJson';
+import fs from 'fs';
 
 export async function fetchBodies(options: {
   url: string;
@@ -11,6 +12,7 @@ export async function fetchBodies(options: {
   start: string;
   stop: string;
   step: string;
+  save: string;
 }) {
   const center = mapNameToId(options.center, naifObjectIdNumbers);
 
@@ -41,9 +43,21 @@ export async function fetchBodies(options: {
 
       data.push(json);
     }
+
+    if (options.save)
+      fs.writeFile(
+        `./${options.save}.json`,
+        JSON.stringify(data),
+        'utf8',
+        error => {
+          if (error) throw error;
+
+          console.log(`Vectors have been saved to ./${options.save}.json`);
+        }
+      );
+
+    console.log(data);
   } catch (error) {
     console.log(error);
   }
-
-  console.log(data);
 }
