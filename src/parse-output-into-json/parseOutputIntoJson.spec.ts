@@ -30,4 +30,3 @@ test('It takes output from JPL HORIZONS, extract the state vector data, and para
     }
   ]);
 });
-   

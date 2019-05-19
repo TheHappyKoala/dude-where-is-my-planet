@@ -14,9 +14,7 @@ export default async (output: string): Promise<any[]> => {
   const json = await csv().fromString(quantities);
 
   return json.map(entry => ({
-    name: output
-      .match(new RegExp('Target body name:(.*)  '))[1]
-      .trim(),
+    name: output.match(new RegExp('Target body name:(.*)  '))![1].trim(),
     date: entry['Calendar Date (TDB)'],
     x: parseFloat(entry.x),
     y: parseFloat(entry.y),
@@ -26,5 +24,3 @@ export default async (output: string): Promise<any[]> => {
     vz: parseFloat(entry.vz)
   }));
 };
-
-
