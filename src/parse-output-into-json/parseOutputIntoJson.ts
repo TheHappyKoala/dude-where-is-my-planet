@@ -4,7 +4,7 @@ export default async (output: string): Promise<any[]> => {
   const start = `$$SOE`;
   const end = `$$EOE`;
 
-  const keys = 'JDTDB, Calendar Date (TDB), X, Y, Z, VX, VY, VZ, LT, RG, RR,';
+  const keys = 'JDTDB, Calendar Date (TDB), x, y, z, vx, vy, vz, LT, RG, RR,';
 
   const quantities = `${keys}${output.substring(
     output.lastIndexOf(start) + 1,
