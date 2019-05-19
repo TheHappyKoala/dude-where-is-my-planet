@@ -1,6 +1,6 @@
 # JPL HORIZONS Node.js Client
 
-##Usage
+## Usage
 
 Running the below command in your terminal will give you state vectors for the Sun and Uranus system between 2001-01-01 and 2001-01-02 and save them to a json file called sunUranusSystem.
 
