@@ -33,16 +33,17 @@ const argv = require('yargs')
   .demandOption(['stop'])
   .option('save', {
     type: 'string',
-    desc: 'Where and whether or not to save the output to a file'
+    desc: 'Where to save the output to a json file and what its name'
   })
-  .argv;
+  .demandOption(['save'])
+  .argv;  
 
 require('../dist/index').fetchBodies({
   url: 'https://ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1',
   bodies: argv.bodies,
   center: argv.center,
   units: argv.units,    
-  step: argv.step,
+  step: argv.step, 
   start: argv.start,
   stop: argv.stop,
   save: argv.save
