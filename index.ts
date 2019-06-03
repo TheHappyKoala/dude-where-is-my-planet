@@ -3,6 +3,9 @@ import mapNameToId from './src/map-name-to-id/mapNameToId';
 import callHorizons from './src/call-horizons/callHORIZONS';
 import parseOutputIntoJson from './src/parse-output-into-json/parseOutputIntoJson';
 import fs from 'fs';
+import emoji from 'node-emoji';
+
+const { emojify } = emoji;
 
 export async function fetchBodies(options: {
   url: string;
@@ -25,7 +28,16 @@ export async function fetchBodies(options: {
       ${JSON.stringify(naifObjectIdNumbers)}`
     );
 
-  const data = [];
+  const data: {
+    name: string;
+    date: string;
+    x: number;
+    y: number;
+    z: number;
+    vx: number;
+    vy: number;
+    vz: number;
+  }[][] = [];
 
   try {
     for (const body of options.bodies) {
@@ -52,12 +64,31 @@ export async function fetchBodies(options: {
         error => {
           if (error) throw error;
 
-          console.log(`Vectors have been saved to ./${options.save}.json`);
+          console.log(
+            '\x1b[36m%s\x1b[0m',
+            emojify(`\n\n\n :unicorn_face: :owl: :earth_americas: Results:\n`)
+          );
+
+          console.log(data);
+
+          console.log(
+            '\x1b[35m',
+            emojify(
+              `\nVectors have been saved to :file_folder: ./${
+                options.save
+              }.json`
+            )
+          );
+
+          console.log(
+            '\x1b[30m',
+            emojify(
+              '\nBrought to you by :koala: :koala: :koala: TheHappyKoala :koala: :koala: :koala:\n\n\n'
+            )
+          );
         }
       );
-
-    console.log(data);
   } catch (error) {
-    console.log(error);
+    console.log(error);   
   }
 }
