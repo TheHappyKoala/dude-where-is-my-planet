@@ -19,13 +19,41 @@ export async function fetchBodies(options: {
 }) {
   const center = mapNameToId(options.center, naifObjectIdNumbers);
 
+  const getErrorMessage = () =>
+    emojify(
+      '\n\t:robot_face: ERROR :x::x::x: DOES NOT COMPUTE :exclamation::exclamation::exclamation:\n'
+    );
+
   if (isNaN(center as any))
     throw new Error(
-      `${
-        options.center
-      } is not a valid origin for the coordinate system. For a valid list of coordinate origins, see: 
+      `
+        ${getErrorMessage()}
+        ${
+          options.center
+        } is not a valid origin for the coordinate system. For a valid list of coordinate origins, see: 
       
-      ${JSON.stringify(naifObjectIdNumbers)}`
+        ${JSON.stringify(naifObjectIdNumbers, null, 10)}
+      `
+    );
+
+  if (
+    !(
+      options.units === 'AU-D' ||
+      options.units === 'KM-D' ||
+      options.units === 'KM-S'
+    )
+  )
+    throw new Error(
+      `
+        ${getErrorMessage()}
+        ${
+          options.units
+        } is not a valid set of units. Valid units are limited to the following:
+
+          AU-D
+          or KM-D 
+          or KM-S
+      `
     );
 
   const data: {
@@ -66,7 +94,7 @@ export async function fetchBodies(options: {
 
           console.log(
             '\x1b[36m%s\x1b[0m',
-            emojify(`\n\n\n :unicorn_face: :owl: :earth_americas: Results:\n`)
+            emojify(`\n\n\n:unicorn_face: :owl: :earth_americas: Results:\n`)
           );
 
           console.log(data);
@@ -89,6 +117,6 @@ export async function fetchBodies(options: {
         }
       );
   } catch (error) {
-    console.log(error);   
+    console.log(error);
   }
 }
