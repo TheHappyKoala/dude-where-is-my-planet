@@ -10,7 +10,9 @@
     "test": "jest",
     "start": "nodemon",
     "prettier": "prettier --single-quote --print-width 80 \"./**/*.{js,ts}\" --write",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "fetch-bodies": "node ./bin/fetch-bodies",
+    "build": "node ./build.js"
   },
   "husky": {
     "hooks": {
@@ -35,6 +37,7 @@
     "jest-fetch-mock": "^2.1.2",
     "lint-staged": "^8.1.6",
     "nodemon": "^1.19.0",
+    "npm": "^6.9.0",
     "prettier": "^1.17.0",
     "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
