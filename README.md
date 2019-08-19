@@ -8,7 +8,15 @@ Running the below command in your terminal will give you state vectors for the S
   fetch-bodies --bodies Sun  Uranus --center Sun --units AU-D --step "1 d" --start 2001-01-01 --stop 2001-01-02 --save sunUranusSystem
 ```
 
-The output for this query looks as follows:   
+### Your operating system does not support shebangs?
+
+If your operating system does not support shebangs, you will simply have to run the fetch-bodies script the way you would any npm script, like so:
+
+```
+  npm runfetch-bodies -- --bodies Sun  Uranus --center Sun --units AU-D --step "1 d" --start 2001-01-01 --stop 2001-01-02 --save sunUranusSystem
+```
+
+The output of this query looks as follows:   
 
 ```
   [  
@@ -58,6 +66,10 @@ The output for this query looks as follows:
     ]
   ]
 ```
+
+## Status
+
+This project is a living one and feedback and contributions are very much welcome. To contribute, create a branch and issue a pull request. If you wrote unit tests for your code, that would be much appreciated. 
 
 ## Development
 
