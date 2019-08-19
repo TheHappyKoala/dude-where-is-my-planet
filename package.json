@@ -1,6 +1,6 @@
 {
-  "name": "jpl-horizons-client",
-  "version": "0.1.0",
+  "name": "dude-where-is-my-planet",
+  "version": "0.2.0",
   "description": "Fetch state vectors for Solar System bodies from the JPL HORIZONS on-line solar system data and ephemeris.",
   "main": "./dist/index.js",
   "bin": {
@@ -27,7 +27,7 @@
       ]
     }
   },
-  "author": "Darrell A. Huffman",
+  "author": "Darrell Huffman",
   "license": "GNU General Public License v3.0",
   "devDependencies": {
     "@types/jest": "^24.0.13",

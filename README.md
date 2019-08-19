@@ -1,5 +1,11 @@
 # JPL HORIZONS Node.js Client
 
+## Installation
+
+```
+npm i dude-where-is-my-planet --save
+```
+
 ## Usage
 
 Running the below command in your terminal will give you state vectors for the Sun and Uranus system between 2001-01-01 and 2001-01-02 and save them to a json file called sunUranusSystem.
@@ -13,7 +19,7 @@ Running the below command in your terminal will give you state vectors for the S
 If your operating system does not support shebangs, you will simply have to run the fetch-bodies script the way you would any npm script, like so:
 
 ```
-  npm runfetch-bodies -- --bodies Sun  Uranus --center Sun --units AU-D --step "1 d" --start 2001-01-01 --stop 2001-01-02 --save sunUranusSystem
+  npm run fetch-bodies -- --bodies Sun  Uranus --center Sun --units AU-D --step "1 d" --start 2001-01-01 --stop 2001-01-02 --save sunUranusSystem
 ```
 
 The output of this query looks as follows:   
