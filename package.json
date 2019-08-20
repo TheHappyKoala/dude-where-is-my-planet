@@ -1,10 +1,10 @@
 {
   "name": "dude-where-is-my-planet",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Fetch state vectors for Solar System bodies from the JPL HORIZONS on-line solar system data and ephemeris.",
   "main": "./dist/index.js",
   "bin": {
-    "fetch-bodies": "bin/fetch-bodies.js"
+    "fetch-bodies": "./bin/fetch-bodies.js"
   },
   "scripts": {
     "test": "jest",
