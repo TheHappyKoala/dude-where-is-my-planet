@@ -1,10 +1,10 @@
 {
   "name": "dude-where-is-my-planet",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Fetch state vectors for Solar System bodies from the JPL HORIZONS on-line solar system data and ephemeris.",
   "main": "./dist/index.js",
   "bin": {
-    "fetch-bodies": "./bin/fetch-bodies.js"
+    "fetch-bodies": "./bin/fetch-bodies"
   },
   "scripts": {
     "test": "jest",
@@ -22,7 +22,7 @@
   "lint-staged": {
     "linters": {
       "./**/*.{js,ts}": [
-        "prettier --single-quote --print-width 80 \"./**/*.{js,ts}\" --write",
+        "npm run prettier",
         "jest --bail --coverage --findRelatedTests"
       ]
     }
