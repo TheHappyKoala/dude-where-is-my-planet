@@ -17,12 +17,13 @@
   },
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "linters": {
-      "./**/*.{js,ts}": [
+      "./**/*.{ts}": [
         "npm run lint",
         "jest --bail --coverage --findRelatedTests",
         "npm run prettier"
@@ -32,6 +33,8 @@
   "author": "Darrell Huffman",
   "license": "GNU General Public License v3.0",
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "@types/jest": "^24.0.13",
     "@types/node": "^12.0.0",
     "husky": "^2.2.0",
