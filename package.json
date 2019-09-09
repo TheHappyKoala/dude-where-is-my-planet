@@ -11,6 +11,7 @@
     "start": "nodemon",
     "prettier": "prettier --single-quote --print-width 80 \"./**/*.{js,ts}\" --write",
     "tsc": "tsc",
+    "lint": "tsc --noEmit",
     "fetch-bodies": "node ./bin/fetch-bodies",
     "build": "node ./build.js"
   },
@@ -22,8 +23,9 @@
   "lint-staged": {
     "linters": {
       "./**/*.{js,ts}": [
-        "npm run prettier",
-        "jest --bail --coverage --findRelatedTests"
+        "npm run lint",
+        "jest --bail --coverage --findRelatedTests",
+        "npm run prettier"
       ]
     }
   },
@@ -40,7 +42,6 @@
     "npm": "^6.9.0",
     "prettier": "^1.17.0",
     "ts-jest": "^24.0.2",
-    "tslint": "^5.16.0",
     "typescript": "^3.4.5"
   },
   "dependencies": {
